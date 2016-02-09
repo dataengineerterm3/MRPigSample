@@ -1,0 +1,13 @@
+
+CREATE  EXTERNAL  TABLE business
+(
+value STRING 
+)
+LOCATION  '/yelp';
+
+LOAD DATA INPATH 'yelp/business.json' OVERWRITE INTO TABLE yelp_business;
+
+SELECT 
+  GET_JSON_OBJECT(business.value,'$.stars'), 
+  GET_JSON_OBJECT(business.value,'$.name') 
+FROM business;
