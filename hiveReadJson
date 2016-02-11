@@ -32,5 +32,4 @@ SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
 WITH SERDEPROPERTIES (
   "input.regex" = "([^ ]*) ([^ ]*) ([^ ]*) ([0-9]*) ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*)"
 )
-LOCATION '/yelp/'
-LINES TERMINATED BY '\n';
+LOCATION '/yelp/';
